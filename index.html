@@ -617,6 +617,32 @@
             padding: 80px 24px;
             text-align: center;
             background: linear-gradient(135deg, var(--dark) 0%, var(--dark-mid) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-inner {
+            display: flex;
+            align-items: center;
+            gap: 48px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .cta-mascot-large {
+            flex: 0 0 320px;
+            max-width: 320px;
+        }
+
+        .cta-mascot-large img {
+            width: 100%;
+            border-radius: 20px;
+            filter: drop-shadow(0 0 40px rgba(0, 180, 216, 0.2));
+        }
+
+        .cta-text {
+            flex: 1;
+            text-align: left;
         }
         
         .cta-section h2 { color: var(--white); font-size: 2rem; margin-bottom: 16px; }
@@ -660,6 +686,9 @@
             .mobile-menu-btn { display: block; }
             .cta-secondary { display: block; margin: 12px 0 0 0; }
             .section-illustration { max-width: 100%; }
+            .cta-inner { flex-direction: column; text-align: center; }
+            .cta-text { text-align: center; }
+            .cta-mascot-large { flex: none; max-width: 220px; margin: 0 auto; }
         }
     </style>
 </head>
@@ -965,11 +994,15 @@
     
     <!-- CTA -->
     <section class="cta-section" id="contact">
-        <div class="container">
-            <img src="roiflo_success.webp" alt="ROIFLO" class="cta-mascot">
-            <h2>Ready to Get Your Business Organized?</h2>
-            <p>Book a free 20-minute call. I will look at what is costing you time and show you what can be fixed — no pressure, no pitch.</p>
-            <a href="mailto:hello@nullnosis.com?subject=ROIFLO%20-%20Let's%20Talk&body=Hi%20Richie%2C%0A%0AI%20am%20interested%20in%20learning%20more%20about%20how%20ROIFLO%20can%20help%20my%20business.%0A%0AMy%20business%3A%20%0AWhat%20is%20frustrating%20me%20most%3A%20%0A%0AThanks!" class="cta-btn">Let's Talk</a>
+        <div class="cta-inner">
+            <div class="cta-mascot-large">
+                <img src="assets/mascot_large.webp" alt="ROIFLO mascot — your automation partner">
+            </div>
+            <div class="cta-text">
+                <h2>Ready to Get Your Business Organized?</h2>
+                <p>Book a free 20-minute call. I will look at what is costing you time and show you what can be fixed — no pressure, no pitch.</p>
+                <a href="mailto:hello@nullnosis.com?subject=ROIFLO%20-%20Let's%20Talk&body=Hi%20Richie%2C%0A%0AI%20am%20interested%20in%20learning%20more%20about%20how%20ROIFLO%20can%20help%20my%20business.%0A%0AMy%20business%3A%20%0AWhat%20is%20frustrating%20me%20most%3A%20%0A%0AThanks!" class="cta-btn">Let's Talk</a>
+            </div>
         </div>
     </section>
     
