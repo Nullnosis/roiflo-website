@@ -12,7 +12,7 @@
     <meta property="og:url" content="https://roiflo.com/">
     <meta property="og:title" content="ROIFLO | Your Business, Organized and Running">
     <meta property="og:description" content="Stop losing leads and missing follow-ups. I build the systems that keep your business organized — so you can focus on what you do best.">
-    <meta property="og:image" content="https://roiflo.com/roiflo_hero.webp">
+    <meta property="og:image" content="https://roiflo.com/assets/hero_illustration.webp">
     
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
@@ -98,9 +98,9 @@
             align-items: center;
         }
         
-        .logo { height: 42px; }
+        .logo { height: 42px; border-radius: 8px; }
         
-        nav { display: flex; gap: 32px; align-items: center; }
+        nav { display: flex; gap: 28px; align-items: center; }
         nav a { color: var(--teal-muted); text-decoration: none; font-weight: 500; font-size: 0.95rem; transition: color 0.2s; }
         nav a:hover { color: var(--primary); }
         
@@ -115,6 +115,17 @@
         }
         
         .nav-btn:hover { background: var(--accent); transform: translateY(-1px); }
+
+        /* Mobile menu */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--primary);
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 8px;
+        }
         
         /* Hero */
         .hero {
@@ -145,8 +156,13 @@
         }
         
         .hero-content { flex: 1; }
-        .hero-image { flex: 1; text-align: center; }
-        .hero-image img { width: 100%; max-width: 480px; filter: drop-shadow(0 0 40px rgba(0, 180, 216, 0.2)); }
+        .hero-visual { flex: 1; text-align: center; position: relative; }
+        .hero-visual img { 
+            width: 100%; 
+            max-width: 500px; 
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4), 0 0 40px rgba(0, 180, 216, 0.1);
+        }
         
         .hero h1 {
             font-size: 2.8rem;
@@ -224,6 +240,24 @@
             margin-left: auto;
             margin-right: auto;
         }
+
+        /* Section illustration */
+        .section-illustration {
+            width: 100%;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            display: block;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Mascot accent — smaller, decorative */
+        .section-mascot {
+            width: 80px;
+            margin: 0 auto 20px;
+            display: block;
+            filter: drop-shadow(0 0 15px rgba(0, 180, 216, 0.15));
+        }
         
         /* Problem Section */
         .problems { background: var(--dark-mid); }
@@ -253,14 +287,6 @@
         .problem-card .icon { font-size: 2.2rem; margin-bottom: 14px; }
         .problem-card h3 { font-size: 1.1rem; margin-bottom: 10px; color: var(--primary); }
         .problem-card p { color: var(--gray-400); font-size: 0.95rem; }
-        
-        /* Character accent */
-        .section-character {
-            width: 120px;
-            margin: 0 auto 24px;
-            display: block;
-            filter: drop-shadow(0 0 20px rgba(0, 180, 216, 0.15));
-        }
         
         /* Who It's For */
         .who-its-for { background: var(--dark); }
@@ -297,9 +323,9 @@
             padding: 12px 16px;
             border-radius: 8px;
             font-size: 0.9rem;
-            color: var(--teal-muted);
             font-style: italic;
             border-left: 2px solid var(--primary);
+            color: var(--teal-muted);
         }
         
         /* Case Studies */
@@ -318,6 +344,11 @@
             border-radius: 16px;
             padding: 32px;
             border: 1px solid rgba(0, 180, 216, 0.1);
+            transition: border-color 0.3s;
+        }
+
+        .case-card:hover {
+            border-color: rgba(0, 180, 216, 0.25);
         }
         
         .case-card .case-type {
@@ -454,36 +485,111 @@
         
         .step h3 { color: var(--white); margin-bottom: 8px; }
         .step p { color: var(--gray-400); font-size: 0.9rem; }
-        
-        /* Human Touch */
-        .human-touch { background: var(--dark); }
-        
-        .human-content {
+
+        /* About / Why ROIFLO */
+        .about-section { background: var(--dark); }
+
+        .about-layout {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             gap: 48px;
-            max-width: 900px;
+            max-width: 950px;
             margin: 0 auto;
         }
-        
-        .human-text { flex: 1; }
-        .human-text h2 { color: var(--white); font-size: 1.8rem; margin-bottom: 16px; }
-        .human-text p { color: var(--gray-400); margin-bottom: 16px; font-size: 1.05rem; }
-        
-        .human-text .signature {
+
+        .about-text { flex: 1; }
+        .about-text h2 { color: var(--white); font-size: 1.8rem; margin-bottom: 20px; }
+        .about-text h3 { color: var(--primary); font-size: 1.1rem; margin-bottom: 10px; margin-top: 24px; }
+        .about-text p { color: var(--gray-400); margin-bottom: 14px; font-size: 1.02rem; line-height: 1.75; }
+
+        .about-visual { flex: 0 0 320px; }
+        .about-visual img { 
+            width: 100%; 
+            border-radius: 16px; 
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .about-signature {
             color: var(--primary);
             font-weight: 600;
             font-size: 1.1rem;
-            margin-top: 20px;
+            margin-top: 24px;
         }
-        
-        .human-text .signature span { color: var(--gray-400); font-weight: 400; font-size: 0.9rem; }
-        
-        .human-image { flex: 0 0 200px; }
-        .human-image img { width: 200px; filter: drop-shadow(0 0 30px rgba(0, 180, 216, 0.15)); }
+
+        .about-signature span { color: var(--gray-400); font-weight: 400; font-size: 0.9rem; }
+
+        /* Blog Section */
+        .blog-section { background: var(--dark-mid); }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+            max-width: 950px;
+            margin: 0 auto;
+        }
+
+        .blog-card {
+            background: var(--dark-light);
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid rgba(0, 180, 216, 0.08);
+            transition: border-color 0.3s, transform 0.2s;
+        }
+
+        .blog-card:hover {
+            border-color: rgba(0, 180, 216, 0.25);
+            transform: translateY(-3px);
+        }
+
+        .blog-card-image {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+        }
+
+        .blog-card-body {
+            padding: 20px;
+        }
+
+        .blog-card-tag {
+            display: inline-block;
+            background: rgba(0, 180, 216, 0.1);
+            color: var(--primary);
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 10px;
+        }
+
+        .blog-card h3 {
+            color: var(--white);
+            font-size: 1.05rem;
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+
+        .blog-card p {
+            color: var(--gray-400);
+            font-size: 0.9rem;
+            margin-bottom: 14px;
+        }
+
+        .blog-card-link {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        .blog-card-link:hover { color: var(--accent); }
         
         /* FAQ */
-        .faq { background: var(--dark-mid); }
+        .faq { background: var(--dark); }
         
         .faq-grid {
             display: grid;
@@ -494,7 +600,7 @@
         }
         
         .faq-item {
-            background: var(--dark-light);
+            background: var(--dark-mid);
             padding: 24px;
             border-radius: 12px;
             border: 1px solid rgba(0, 180, 216, 0.08);
@@ -513,8 +619,8 @@
         .cta-section h2 { color: var(--white); font-size: 2rem; margin-bottom: 16px; }
         .cta-section p { color: var(--gray-400); margin-bottom: 28px; font-size: 1.1rem; }
         
-        .cta-character {
-            width: 100px;
+        .cta-mascot {
+            width: 90px;
             margin: 0 auto 24px;
             display: block;
             filter: drop-shadow(0 0 20px rgba(0, 180, 216, 0.15));
@@ -543,10 +649,14 @@
             .case-grid { grid-template-columns: 1fr; }
             .range-grid { grid-template-columns: 1fr; }
             .steps { flex-direction: column; gap: 32px; }
-            .human-content { flex-direction: column; text-align: center; }
+            .about-layout { flex-direction: column; }
+            .about-visual { flex: none; width: 100%; }
+            .blog-grid { grid-template-columns: 1fr; }
             .faq-grid { grid-template-columns: 1fr; }
             nav { display: none; }
+            .mobile-menu-btn { display: block; }
             .cta-secondary { display: block; margin: 12px 0 0 0; }
+            .section-illustration { max-width: 100%; }
         }
     </style>
 </head>
@@ -555,14 +665,16 @@
     <header>
         <div class="header-content">
             <img src="logo.webp" alt="ROIFLO" class="logo">
-            <nav>
+            <nav id="main-nav">
                 <a href="#problems">The Problem</a>
                 <a href="#who-its-for">Who It's For</a>
                 <a href="#results">Results</a>
-                <a href="#how-it-works">How It Works</a>
+                <a href="#about">About</a>
+                <a href="#blog">Insights</a>
                 <a href="#faq">FAQ</a>
                 <a href="#contact" class="nav-btn">Let's Talk</a>
             </nav>
+            <button class="mobile-menu-btn" onclick="document.getElementById('main-nav').style.display = document.getElementById('main-nav').style.display === 'flex' ? 'none' : 'flex'">☰</button>
         </div>
     </header>
     
@@ -576,8 +688,8 @@
                 <a href="#results" class="cta-secondary">See How It Works →</a>
                 <p class="hero-sub">A <a href="https://nullnosis.com" target="_blank">Nullnosis</a> service — human strategy, organized delivery.</p>
             </div>
-            <div class="hero-image">
-                <img src="roiflo_hero.webp" alt="ROIFLO - Business Organization Assistant">
+            <div class="hero-visual">
+                <img src="assets/hero_illustration.webp" alt="ROIFLO - Connected business ecosystem with automation, analytics, and communication flowing together">
             </div>
         </div>
     </section>
@@ -585,7 +697,7 @@
     <!-- The Problem -->
     <section class="problems" id="problems">
         <div class="container">
-            <img src="roiflo_thinking.webp" alt="ROIFLO thinking" class="section-character">
+            <img src="assets/problems_illustration.webp" alt="Business chaos to organized flow" class="section-illustration">
             <h2 class="section-title">Sound Familiar?</h2>
             <p class="section-subtitle">These are the things business owners tell me before we start working together.</p>
             <div class="problem-grid">
@@ -656,7 +768,7 @@
     <!-- Results -->
     <section class="case-studies" id="results">
         <div class="container">
-            <img src="roiflo_success.webp" alt="ROIFLO results" class="section-character">
+            <img src="roiflo_success.webp" alt="Results" class="section-mascot">
             <h2 class="section-title">What This Looks Like in Practice</h2>
             <p class="section-subtitle">Real problems I have solved for real businesses. Names kept private, results kept honest.</p>
             <div class="case-grid">
@@ -726,6 +838,7 @@
     <!-- How It Works -->
     <section class="how-it-works" id="how-it-works">
         <div class="container">
+            <img src="assets/process_illustration.webp" alt="Four-step process from conversation to running system" class="section-illustration">
             <h2 class="section-title">How We Work Together</h2>
             <p class="section-subtitle">No confusing software to learn. No jargon. I handle the technical stuff.</p>
             <div class="steps">
@@ -752,19 +865,62 @@
             </div>
         </div>
     </section>
-    
-    <!-- Human Touch -->
-    <section class="human-touch">
+
+    <!-- About / Why ROIFLO -->
+    <section class="about-section" id="about">
         <div class="container">
-            <div class="human-content">
-                <div class="human-text">
-                    <h2>Built by a Person, Not a Platform</h2>
-                    <p>ROIFLO is not software you sign up for. It is a service. I personally learn how your business works, figure out what is causing friction, and build systems that fix it. The same person who understands your goals is the same person building your solution.</p>
-                    <p>I am also building these systems for my own business — so everything I recommend is something I actually use and trust. No theory, no upsells, just what works.</p>
-                    <p class="signature">— Richie <span>/ Nullnosis — Strategy & Systems</span></p>
+            <div class="about-layout">
+                <div class="about-text">
+                    <h2>Why ROIFLO Exists</h2>
+                    <p><a href="https://nullnosis.com" target="_blank" style="color: var(--primary); text-decoration: none; font-weight: 600;">Nullnosis</a> is my marketing consultancy — it is where strategy, SEO, content, and brand positioning live. That is the thinking side of the business. The "what should you do and why" side.</p>
+                    <p>But I kept running into the same problem with clients: great strategy means nothing if the execution is a mess. Leads come in but nobody follows up. Content gets created but never gets posted. Reports exist but nobody reads them. The problem was not the plan — it was the plumbing.</p>
+                    
+                    <h3>ROIFLO is the plumbing.</h3>
+                    <p>It is where the deep technical work lives — the automation, the data flow, the systems that make everything actually run. I separated it from Nullnosis because the audience is different. Some people come to me for marketing strategy. Some people come to me because their business is drowning in manual work and they need someone to fix the infrastructure. Some need both.</p>
+                    <p>Think of it this way: Nullnosis figures out what your business should be doing. ROIFLO makes sure it actually happens — automatically, reliably, without you having to babysit it.</p>
+                    <p>Same person behind both. Same standards. Same commitment to building things that actually work instead of things that just look impressive on a slide deck.</p>
+                    
+                    <p class="about-signature">— Richie <span>/ Founder, Nullnosis & ROIFLO</span></p>
                 </div>
-                <div class="human-image">
-                    <img src="roiflo_support.webp" alt="ROIFLO support">
+                <div class="about-visual">
+                    <img src="assets/about_illustration.webp" alt="Nullnosis strategy flowing into ROIFLO technical execution">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog / Insights -->
+    <section class="blog-section" id="blog">
+        <div class="container">
+            <h2 class="section-title">Insights</h2>
+            <p class="section-subtitle">Practical thinking on marketing, systems, and running a business without burning out.</p>
+            <div class="blog-grid">
+                <div class="blog-card">
+                    <img src="assets/blog_illustration.webp" alt="SEO strategy" class="blog-card-image">
+                    <div class="blog-card-body">
+                        <div class="blog-card-tag">SEO</div>
+                        <h3>Why Most Small Businesses Get SEO Wrong</h3>
+                        <p>You do not need 50 blog posts. You need 5 pages that actually answer what your customers are searching for. Here is how to think about SEO when you are small.</p>
+                        <a href="https://nullnosis.com/blog" target="_blank" class="blog-card-link">Read on Nullnosis →</a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <img src="assets/problems_illustration.webp" alt="Automation" class="blog-card-image">
+                    <div class="blog-card-body">
+                        <div class="blog-card-tag">Systems</div>
+                        <h3>The Real Cost of Doing Everything Manually</h3>
+                        <p>Every time you copy-paste a lead into a spreadsheet, you are spending $50 worth of your time on a $0 task. Here is how to calculate what manual work actually costs you.</p>
+                        <a href="https://nullnosis.com/blog" target="_blank" class="blog-card-link">Read on Nullnosis →</a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <img src="assets/process_illustration.webp" alt="Content strategy" class="blog-card-image">
+                    <div class="blog-card-body">
+                        <div class="blog-card-tag">Content</div>
+                        <h3>Content That Works for Service Businesses</h3>
+                        <p>You do not need to go viral. You need to show up consistently where your customers are looking. A simple content framework for businesses that do not have a marketing team.</p>
+                        <a href="https://nullnosis.com/blog" target="_blank" class="blog-card-link">Read on Nullnosis →</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -790,15 +946,15 @@
                 </div>
                 <div class="faq-item">
                     <h3>How long does it take?</h3>
-                    <p>Simple systems can be live in a week. More complex setups take 2-4 weeks. I will give you a realistic timeline upfront so you know exactly what to expect.</p>
+                    <p>Most systems are up and running within 1-2 weeks. Complex operations with multiple integrations may take 3-4 weeks. You will know the timeline before we start.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What is the difference between Nullnosis and ROIFLO?</h3>
+                    <p>Nullnosis is the marketing strategy side — SEO, content, brand positioning, and consulting. ROIFLO is the technical execution side — automation, systems, and infrastructure. Same person, different focus areas. Some clients use both.</p>
                 </div>
                 <div class="faq-item">
                     <h3>What if something breaks?</h3>
                     <p>I monitor your systems and fix issues fast. With a maintenance plan, you get priority support, regular check-ups, and ongoing improvements as your business evolves.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>Who is behind ROIFLO?</h3>
-                    <p>My name is Richie. ROIFLO is a specialized service offered through <a href="https://nullnosis.com" target="_blank" style="color: var(--primary);">Nullnosis</a>, my marketing and systems consultancy. I work with a small network of trusted specialists when a project needs it, but I personally lead every engagement.</p>
                 </div>
             </div>
         </div>
@@ -807,7 +963,7 @@
     <!-- CTA -->
     <section class="cta-section" id="contact">
         <div class="container">
-            <img src="roiflo_success.webp" alt="ROIFLO" class="cta-character">
+            <img src="roiflo_success.webp" alt="ROIFLO" class="cta-mascot">
             <h2>Ready to Get Your Business Organized?</h2>
             <p>Book a free 20-minute call. I will look at what is costing you time and show you what can be fixed — no pressure, no pitch.</p>
             <a href="mailto:hello@nullnosis.com?subject=ROIFLO%20-%20Let's%20Talk&body=Hi%20Richie%2C%0A%0AI%20am%20interested%20in%20learning%20more%20about%20how%20ROIFLO%20can%20help%20my%20business.%0A%0AMy%20business%3A%20%0AWhat%20is%20frustrating%20me%20most%3A%20%0A%0AThanks!" class="cta-btn">Let's Talk</a>
