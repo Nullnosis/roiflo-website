@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ROIFLO | Business Automation That Feels Human</title>
-    <meta name="description" content="Custom business automation for service businesses, SaaS, e-commerce, and PR. We build the systems that run your business while you sleep.">
-    <meta name="keywords" content="business automation, workflow automation, lead automation, automated follow-ups, CRM automation, email automation">
+    <meta name="description" content="Custom business automation for service businesses and local brands. I build the systems that run your business while you sleep. A Nullnosis service.">
+    <meta name="keywords" content="business automation, workflow automation, lead automation, automated follow-ups, marketing automation, n8n automation, small business automation">
     
     <!-- Open Graph / Social -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://roiflo.com/">
     <meta property="og:title" content="ROIFLO | Business Automation That Feels Human">
-    <meta property="og:description" content="We build custom automation systems that handle the repetitive stuff — so you can focus on what matters.">
+    <meta property="og:description" content="I build custom automation systems that handle the repetitive stuff — so you can focus on what matters.">
     <meta property="og:image" content="https://roiflo.com/roiflo_hero.webp">
     
     <!-- Twitter -->
@@ -25,9 +25,13 @@
         "@context": "https://schema.org",
         "@type": "ProfessionalService",
         "name": "ROIFLO",
-        "description": "Business automation services for service businesses, SaaS, e-commerce, and PR agencies.",
+        "description": "Done-for-you business automation for service businesses and local brands.",
         "url": "https://roiflo.com",
         "logo": "https://roiflo.com/logo.webp",
+        "founder": {
+            "@type": "Person",
+            "name": "Richie"
+        },
         "parentOrganization": {
             "@type": "Organization",
             "name": "Nullnosis LLC",
@@ -230,10 +234,10 @@
             display: block;
         }
         
-        /* Industries */
-        .industries { background: var(--cream); }
+        /* Who It's For */
+        .who-its-for { background: var(--cream); }
         
-        .industry-grid {
+        .audience-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 24px;
@@ -241,14 +245,14 @@
             margin: 0 auto;
         }
         
-        .industry-card {
+        .audience-card {
             background: var(--white);
             padding: 28px;
             border-radius: 16px;
             border-left: 4px solid var(--orange);
         }
         
-        .industry-card h3 {
+        .audience-card h3 {
             font-size: 1.15rem;
             margin-bottom: 12px;
             color: var(--teal);
@@ -257,10 +261,10 @@
             gap: 10px;
         }
         
-        .industry-card h3 .icon { font-size: 1.3rem; }
-        .industry-card p { color: var(--gray-600); font-size: 0.95rem; margin-bottom: 12px; }
+        .audience-card h3 .icon { font-size: 1.3rem; }
+        .audience-card p { color: var(--gray-600); font-size: 0.95rem; margin-bottom: 12px; }
         
-        .industry-card .example {
+        .audience-card .example {
             background: var(--cream);
             padding: 12px 16px;
             border-radius: 8px;
@@ -269,48 +273,69 @@
             font-style: italic;
         }
         
-        /* Case Studies */
-        .case-studies { background: var(--white); }
+        /* Case Study */
+        .case-study { background: var(--white); }
         
-        .case-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 28px;
-            max-width: 1000px;
+        .case-study-card {
+            max-width: 800px;
             margin: 0 auto;
-        }
-        
-        .case-card {
             background: var(--cream);
             border-radius: 16px;
             overflow: hidden;
         }
         
-        .case-card-header {
+        .case-study-header {
             background: var(--teal);
             color: white;
-            padding: 20px;
+            padding: 28px 32px;
         }
         
-        .case-card-header .industry { font-size: 0.85rem; opacity: 0.8; margin-bottom: 4px; }
-        .case-card-header h3 { font-size: 1.1rem; }
+        .case-study-header .label {
+            font-size: 0.85rem;
+            opacity: 0.8;
+            margin-bottom: 4px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
         
-        .case-card-body { padding: 20px; }
+        .case-study-header h3 { font-size: 1.4rem; }
         
-        .case-stat {
+        .case-study-body { padding: 32px; }
+        
+        .case-stats {
             display: flex;
-            justify-content: space-between;
-            margin-bottom: 16px;
+            justify-content: space-around;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+            gap: 16px;
         }
         
-        .case-stat-item { text-align: center; }
-        .case-stat-item .number { font-size: 1.5rem; font-weight: 700; color: var(--orange); }
-        .case-stat-item .label { font-size: 0.8rem; color: var(--gray-600); }
+        .case-stat-item { text-align: center; min-width: 120px; }
+        .case-stat-item .number { font-size: 1.8rem; font-weight: 700; color: var(--orange); }
+        .case-stat-item .label { font-size: 0.85rem; color: var(--gray-600); }
         
-        .case-card-body p { font-size: 0.9rem; color: var(--gray-600); }
+        .case-study-body p {
+            font-size: 1rem;
+            color: var(--gray-600);
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+        
+        .case-study-note {
+            font-size: 0.9rem;
+            color: var(--teal);
+            font-style: italic;
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid rgba(0,0,0,0.08);
+        }
         
         /* How It Works */
-        .how-it-works { background: var(--teal); color: white; }
+        .how-it-works {
+            background: var(--teal);
+            color: white;
+        }
+        
         .how-it-works .section-title { color: white; }
         .how-it-works .section-subtitle { color: rgba(255,255,255,0.8); }
         
@@ -447,8 +472,8 @@
             .hero h1 { font-size: 2rem; }
             .hero p { margin: 0 auto 28px; }
             .features-grid { grid-template-columns: 1fr; }
-            .industry-grid { grid-template-columns: 1fr; }
-            .case-grid { grid-template-columns: 1fr; }
+            .audience-grid { grid-template-columns: 1fr; }
+            .case-stats { flex-direction: column; }
             .steps { flex-direction: column; gap: 32px; }
             .human-content { flex-direction: column; text-align: center; }
             .faq-grid { grid-template-columns: 1fr; }
@@ -463,9 +488,10 @@
         <div class="header-content">
             <img src="logo.webp" alt="ROIFLO" class="logo">
             <nav>
-                <a href="#industries">Industries</a>
-                <a href="#case-studies">Results</a>
+                <a href="#who-its-for">Who It's For</a>
+                <a href="#case-study">Results</a>
                 <a href="#how-it-works">How It Works</a>
+                <a href="#faq">FAQ</a>
                 <a href="#contact" class="nav-btn">Let's Talk</a>
             </nav>
         </div>
@@ -476,10 +502,10 @@
         <div class="hero-inner">
             <div class="hero-content">
                 <h1>Your Business, <span>Running Smoothly</span> — Even While You Sleep</h1>
-                <p>We build custom automation systems that handle the repetitive stuff — lead follow-ups, data transfers, notifications, reports — so you can focus on the work that actually matters.</p>
+                <p>I build custom automation systems that handle the repetitive stuff — lead follow-ups, data transfers, notifications, reports — so you can focus on the work that actually matters.</p>
                 <a href="#contact" class="cta-btn">Book a Free Strategy Call</a>
-                <a href="#case-studies" class="cta-secondary">See Results →</a>
-                <p class="hero-sub">A <a href="https://nullnosis.com" target="_blank">Nullnosis</a> product — human expertise, automated delivery.</p>
+                <a href="#case-study" class="cta-secondary">See Real Results →</a>
+                <p class="hero-sub">A <a href="https://nullnosis.com" target="_blank">Nullnosis</a> service — human strategy, automated delivery.</p>
             </div>
             <div class="hero-image">
                 <img src="roiflo_hero.webp" alt="ROIFLO - Business Automation Assistant">
@@ -487,141 +513,108 @@
         </div>
     </section>
     
-    <!-- What We Do -->
+    <!-- What I Do -->
     <section class="what-we-do">
         <div class="container">
             <img src="roiflo_thinking.webp" alt="ROIFLO thinking" class="section-character">
-            <h2 class="section-title">What We Actually Do</h2>
-            <p class="section-subtitle">We're not a software tool you have to learn. We build the automations FOR you, tailored to how your business works.</p>
+            <h2 class="section-title">What I Actually Do</h2>
+            <p class="section-subtitle">I'm not a software tool you have to learn. I build the automations for you, tailored to how your business works.</p>
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="icon">⚡</div>
                     <h3>Instant Lead Response</h3>
-                    <p>Someone fills out your form at 2am? They get a response in seconds, not hours.</p>
+                    <p>Someone fills out your form at 2am? They get a response in seconds, not hours. No lead falls through the cracks.</p>
                 </div>
                 <div class="feature-card">
                     <div class="icon">🔄</div>
                     <h3>Data That Flows</h3>
-                    <p>No more copy-pasting between apps. Your tools talk to each other automatically.</p>
+                    <p>No more copy-pasting between apps. Your tools talk to each other automatically — CRM, calendar, email, everything.</p>
                 </div>
                 <div class="feature-card">
                     <div class="icon">📱</div>
                     <h3>Alerts That Matter</h3>
-                    <p>Get notified about the important stuff — new leads, big orders, urgent issues — right to your phone.</p>
+                    <p>Get notified about the important stuff — new leads, missed follow-ups, urgent issues — right to your phone.</p>
                 </div>
                 <div class="feature-card">
                     <div class="icon">📊</div>
                     <h3>Reports on Autopilot</h3>
-                    <p>Daily or weekly summaries delivered to your inbox. Know what's happening without digging.</p>
+                    <p>Daily or weekly summaries delivered to your inbox. Know what's happening without digging through dashboards.</p>
                 </div>
                 <div class="feature-card">
                     <div class="icon">✉️</div>
                     <h3>Smart Follow-Ups</h3>
-                    <p>Automated email and SMS sequences that feel personal, not robotic.</p>
+                    <p>Automated email and message sequences that feel personal, not robotic. Timed right, every time.</p>
                 </div>
                 <div class="feature-card">
                     <div class="icon">🔗</div>
                     <h3>Connect Everything</h3>
-                    <p>CRM, email, calendar, payments, spreadsheets — all working together seamlessly.</p>
+                    <p>Website, email, calendar, payments, social media, spreadsheets — all working together seamlessly.</p>
                 </div>
             </div>
         </div>
     </section>
     
-    <!-- Industries -->
-    <section class="industries" id="industries">
+    <!-- Who It's For -->
+    <section class="who-its-for" id="who-its-for">
         <div class="container">
             <h2 class="section-title">Built for Businesses Like Yours</h2>
-            <p class="section-subtitle">We specialize in businesses that move data. If information flows through your company, we can automate it.</p>
-            <div class="industry-grid">
-                <div class="industry-card">
+            <p class="section-subtitle">I specialize in service businesses and local brands that are growing but drowning in manual work.</p>
+            <div class="audience-grid">
+                <div class="audience-card">
                     <h3><span class="icon">🏢</span> Service Businesses</h3>
-                    <p>Consultants, agencies, coaches, and local services that need to capture leads and follow up fast.</p>
+                    <p>Consultants, agencies, coaches, and professional services that need to capture leads and follow up fast — without hiring an assistant.</p>
                     <div class="example">"New inquiry → Instant confirmation → Calendar link → Reminder sequence → Post-call follow-up"</div>
                 </div>
-                <div class="industry-card">
-                    <h3><span class="icon">💻</span> SaaS Companies</h3>
-                    <p>Startups and software teams that need to onboard users, track metrics, and reduce churn.</p>
-                    <div class="example">"New signup → Welcome sequence → Usage tracking → Churn risk alert → Re-engagement email"</div>
+                <div class="audience-card">
+                    <h3><span class="icon">📍</span> Local Brands</h3>
+                    <p>Restaurants, salons, studios, and shops that need to manage reviews, social media, and customer communication without spending all day on it.</p>
+                    <div class="example">"New review → Auto-response draft → Social post scheduled → Monthly report generated"</div>
                 </div>
-                <div class="industry-card">
-                    <h3><span class="icon">🛒</span> E-Commerce</h3>
-                    <p>Online stores that need order notifications, inventory alerts, and customer follow-ups.</p>
-                    <div class="example">"Order placed → Fulfillment alert → Shipping update → Delivery confirmation → Review request"</div>
+                <div class="audience-card">
+                    <h3><span class="icon">🚀</span> Growing Startups</h3>
+                    <p>Small teams doing too much manually. If you're copy-pasting data between apps or forgetting to follow up, I can fix that.</p>
+                    <div class="example">"New signup → Welcome email → CRM entry → Slack notification → 3-day check-in"</div>
                 </div>
-                <div class="industry-card">
-                    <h3><span class="icon">📰</span> PR & Media</h3>
-                    <p>Agencies and teams that need to track mentions, manage outreach, and report to clients.</p>
-                    <div class="example">"Media mention detected → Team notification → Client report updated → Coverage summary sent"</div>
+                <div class="audience-card">
+                    <h3><span class="icon">🎯</span> Solo Operators</h3>
+                    <p>One-person businesses that need to operate like a team. I build the systems so you can focus on the work that generates revenue.</p>
+                    <div class="example">"Morning briefing → Task list → Content scheduled → Invoices tracked → Pipeline updated"</div>
                 </div>
             </div>
         </div>
     </section>
     
-    <!-- Case Studies -->
-    <section class="case-studies" id="case-studies">
+    <!-- Case Study -->
+    <section class="case-study" id="case-study">
         <div class="container">
             <img src="roiflo_success.webp" alt="ROIFLO celebrating success" class="section-character">
-            <h2 class="section-title">Real Results, Real Businesses</h2>
-            <p class="section-subtitle">Here's what automation looks like in action.</p>
-            <div class="case-grid">
-                <article class="case-card">
-                    <div class="case-card-header">
-                        <div class="industry">Service Business</div>
-                        <h3>Marketing Consultant</h3>
-                    </div>
-                    <div class="case-card-body">
-                        <div class="case-stat">
-                            <div class="case-stat-item">
-                                <div class="number">85%</div>
-                                <div class="label">Faster Response</div>
-                            </div>
-                            <div class="case-stat-item">
-                                <div class="number">12hrs</div>
-                                <div class="label">Saved Weekly</div>
-                            </div>
+            <h2 class="section-title">Real Results, Real Business</h2>
+            <p class="section-subtitle">Here's what automation looks like in action for an actual client.</p>
+            <div class="case-study-card">
+                <div class="case-study-header">
+                    <div class="label">Client Case Study</div>
+                    <h3>The Hidden Rose NYC — Local Brand & Event Space</h3>
+                </div>
+                <div class="case-study-body">
+                    <div class="case-stats">
+                        <div class="case-stat-item">
+                            <div class="number">~10hrs</div>
+                            <div class="label">Saved Weekly</div>
                         </div>
-                        <p>Automated lead capture, instant follow-up emails, and calendar booking. No more leads slipping through the cracks at 2am.</p>
-                    </div>
-                </article>
-                <article class="case-card">
-                    <div class="case-card-header">
-                        <div class="industry">E-Commerce</div>
-                        <h3>Online Retailer</h3>
-                    </div>
-                    <div class="case-card-body">
-                        <div class="case-stat">
-                            <div class="case-stat-item">
-                                <div class="number">3x</div>
-                                <div class="label">More Reviews</div>
-                            </div>
-                            <div class="case-stat-item">
-                                <div class="number">0</div>
-                                <div class="label">Missed Orders</div>
-                            </div>
+                        <div class="case-stat-item">
+                            <div class="number">85%</div>
+                            <div class="label">Faster Lead Response</div>
                         </div>
-                        <p>Order notifications, shipping updates, and automated review requests. Every customer gets the same great experience.</p>
-                    </div>
-                </article>
-                <article class="case-card">
-                    <div class="case-card-header">
-                        <div class="industry">SaaS</div>
-                        <h3>Software Startup</h3>
-                    </div>
-                    <div class="case-card-body">
-                        <div class="case-stat">
-                            <div class="case-stat-item">
-                                <div class="number">40%</div>
-                                <div class="label">Less Churn</div>
-                            </div>
-                            <div class="case-stat-item">
-                                <div class="number">2x</div>
-                                <div class="label">Trial Converts</div>
-                            </div>
+                        <div class="case-stat-item">
+                            <div class="number">22+</div>
+                            <div class="label">Workflows Automated</div>
                         </div>
-                        <p>Onboarding sequences, usage alerts, and proactive outreach to at-risk users before they cancel.</p>
                     </div>
-                </article>
+                    <p>The Hidden Rose is a NYC-based brand that was handling everything manually — lead follow-ups, content scheduling, client communication, and reporting. The owner was spending hours every week on tasks that should have taken minutes.</p>
+                    <p>I built a complete automation system: instant lead capture and response, automated content approval through Telegram, daily business briefings, website monitoring, and a full content calendar that generates and schedules posts. Every tool they use now talks to every other tool.</p>
+                    <p>The result: the owner went from reactive firefighting to proactive business building. Lead response dropped from hours to minutes. Content goes from idea to published with a single approval tap on their phone.</p>
+                    <p class="case-study-note">This is an ongoing engagement. Metrics are based on early results and will be updated as the system matures.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -630,7 +623,7 @@
     <section class="how-it-works" id="how-it-works">
         <div class="container">
             <h2 class="section-title">How We Work Together</h2>
-            <p class="section-subtitle">No confusing software to learn. We handle the technical stuff.</p>
+            <p class="section-subtitle">No confusing software to learn. I handle the technical stuff.</p>
             <div class="steps">
                 <div class="step">
                     <div class="step-number">1</div>
@@ -639,18 +632,18 @@
                 </div>
                 <div class="step">
                     <div class="step-number">2</div>
-                    <h3>We Design</h3>
-                    <p>We map out exactly what automations will help — no jargon, just clear outcomes.</p>
+                    <h3>I Design</h3>
+                    <p>I map out exactly what automations will help — no jargon, just clear outcomes and a fixed quote.</p>
                 </div>
                 <div class="step">
                     <div class="step-number">3</div>
-                    <h3>We Build</h3>
-                    <p>We create, test, and deploy. You approve everything before it goes live.</p>
+                    <h3>I Build</h3>
+                    <p>I create, test, and deploy. You approve everything before it goes live.</p>
                 </div>
                 <div class="step">
                     <div class="step-number">4</div>
-                    <h3>We Support</h3>
-                    <p>Ongoing maintenance and tweaks. Your automations keep running, we keep improving.</p>
+                    <h3>I Support</h3>
+                    <p>Ongoing maintenance and improvements. Your automations keep running, I keep optimizing.</p>
                 </div>
             </div>
         </div>
@@ -662,9 +655,9 @@
             <div class="human-content">
                 <div class="human-text">
                     <h2>Automation With a Human Touch</h2>
-                    <p>ROIFLO isn't a faceless tool — it's a service built by real people who understand your business. We're not here to replace you with robots. We're here to handle the boring stuff so you can do more of what you're actually good at.</p>
-                    <p>Every automation we build is designed with you in the loop. You stay in control. We just make things run smoother.</p>
-                    <p class="signature">— The Nullnosis Team <span>/ Marketing & Automation</span></p>
+                    <p>ROIFLO isn't a faceless tool — it's a done-for-you service. I personally design and build every automation system. The same person who understands your business strategy is the same person building your technical solution.</p>
+                    <p>Every automation I build is designed with you in the loop. You stay in control. I just make things run smoother so you can focus on what you're actually good at.</p>
+                    <p class="signature">— Richie <span>/ Nullnosis — Marketing & Automation</span></p>
                 </div>
                 <div class="human-image">
                     <img src="roiflo_support.webp" alt="ROIFLO support">
@@ -674,34 +667,34 @@
     </section>
     
     <!-- FAQ -->
-    <section class="faq">
+    <section class="faq" id="faq">
         <div class="container">
             <h2 class="section-title">Common Questions</h2>
             <p class="section-subtitle">Straight answers, no jargon.</p>
             <div class="faq-grid">
                 <div class="faq-item">
+                    <h3>Is ROIFLO a software tool I have to learn?</h3>
+                    <p>No. ROIFLO is a done-for-you service. I don't sell you software — I design, build, and manage custom automation systems for your business. You don't have to learn a new platform or write any code.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Who is behind ROIFLO?</h3>
+                    <p>My name is Richie. ROIFLO is a specialized automation service offered by Nullnosis, my marketing consultancy. I personally design and build every system. The person who understands your strategy is the same person building your solution.</p>
+                </div>
+                <div class="faq-item">
                     <h3>How much does it cost?</h3>
-                    <p>Projects typically start at $500 for simple automations. Monthly maintenance plans start at $150/month. We'll give you a clear quote after our first call.</p>
+                    <p>Custom automation projects are scoped based on complexity, with a typical minimum engagement of $500. For ongoing support and maintenance, retainer plans start at $250/month. You'll get a clear quote after our first call.</p>
                 </div>
                 <div class="faq-item">
-                    <h3>How long does it take?</h3>
-                    <p>Simple automations: 1-2 weeks. More complex systems: 3-4 weeks. We'll give you a timeline upfront and stick to it.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>Do I need technical skills?</h3>
-                    <p>Nope. We handle all the technical work. You just tell us what you need, and we make it happen.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>What tools do you work with?</h3>
-                    <p>Most popular business tools: Google Workspace, Slack, HubSpot, Mailchimp, Shopify, Stripe, Notion, Airtable, and hundreds more.</p>
+                    <h3>What technology do you use?</h3>
+                    <p>My core stack includes n8n for workflow automation, Notion as a central database, Google Workspace for files and email, and Telegram for instant communication. This connects to hundreds of other apps — your CRM, website, email marketing, payments, and more.</p>
                 </div>
                 <div class="faq-item">
                     <h3>What if something breaks?</h3>
-                    <p>We monitor your automations and fix issues fast. With a maintenance plan, you get priority support and regular check-ups.</p>
+                    <p>I monitor your automations and fix issues fast. With a maintenance plan, you get priority support, regular check-ups, and ongoing improvements as your business evolves.</p>
                 </div>
                 <div class="faq-item">
-                    <h3>Can I make changes later?</h3>
-                    <p>Absolutely. Your business will evolve, and your automations should too. We make updates easy.</p>
+                    <h3>How do you measure results?</h3>
+                    <p>I focus on tangible outcomes — hours saved, response time reduced, leads captured, tasks automated. We define what success looks like together and track progress against those specific goals.</p>
                 </div>
             </div>
         </div>
@@ -712,16 +705,16 @@
         <div class="container">
             <img src="roiflo_success.webp" alt="ROIFLO" class="cta-character">
             <h2>Ready to Stop Doing Everything Manually?</h2>
-            <p>Book a free 20-minute call. We'll talk about your business and show you what's possible — no pressure, no pitch.</p>
-            <a href="mailto:support@roiflo.com?subject=ROIFLO%20Strategy%20Call" class="cta-btn">Book Your Free Call</a>
+            <p>Book a free 20-minute call. I'll look at your business and show you what can be automated — no pressure, no pitch.</p>
+            <a href="mailto:hello@nullnosis.com?subject=ROIFLO%20Strategy%20Call&body=Hi%20Richie%2C%0A%0AI'm%20interested%20in%20learning%20more%20about%20ROIFLO%20automation%20for%20my%20business.%0A%0AMy%20business%3A%20%0AWhat%20I%20need%20help%20with%3A%20%0A%0AThanks!" class="cta-btn">Book Your Free Call</a>
         </div>
     </section>
     
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2026 ROIFLO — A <a href="https://nullnosis.com" target="_blank">Nullnosis</a> Product</p>
-            <p style="margin-top: 8px; font-size: 0.85rem;">Business automation for service businesses, SaaS, e-commerce, and PR.</p>
+            <p>&copy; 2026 ROIFLO — A <a href="https://nullnosis.com" target="_blank">Nullnosis</a> Service</p>
+            <p style="margin-top: 8px; font-size: 0.85rem;">Done-for-you business automation for service businesses and local brands.</p>
         </div>
     </footer>
 </body>
