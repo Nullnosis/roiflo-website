@@ -1,1017 +1,306 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ROIFLO | Your Business, Organized and Running</title>
-    <meta name="description" content="I help small businesses and startups stop losing leads, missing follow-ups, and drowning in manual work. Custom systems that keep everything organized — built for you, not by you.">
-    <meta name="keywords" content="business organization, small business systems, lead management, follow-up automation, startup operations, business workflow, marketing automation">
-    
-    <!-- Open Graph / Social -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://roiflo.com/">
-    <meta property="og:title" content="ROIFLO | Your Business, Organized and Running">
-    <meta property="og:description" content="Stop losing leads and missing follow-ups. I build the systems that keep your business organized — so you can focus on what you do best.">
-    <meta property="og:image" content="https://roiflo.com/assets/hero_illustration.webp">
-    
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="ROIFLO | Your Business, Organized and Running">
-    <meta name="twitter:description" content="Custom business systems for startups and small businesses that need to stop doing everything manually.">
-    
-    <!-- Schema.org markup for Google -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "ProfessionalService",
-        "name": "ROIFLO",
-        "description": "Done-for-you business organization and automation for small businesses and startups.",
-        "url": "https://roiflo.com",
-        "logo": "https://roiflo.com/logo.webp",
-        "founder": {
-            "@type": "Person",
-            "name": "Richie"
-        },
-        "parentOrganization": {
-            "@type": "Organization",
-            "name": "Nullnosis LLC",
-            "url": "https://nullnosis.com"
-        },
-        "serviceType": ["Business Systems", "Workflow Organization", "Marketing Automation"],
-        "areaServed": "Worldwide",
-        "priceRange": "$$"
-    }
-    </script>
-    
-    <link rel="icon" type="image/png" href="logo.webp">
-    <link rel="canonical" href="https://roiflo.com/">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary: #00b4d8;
-            --primary-dark: #0096b7;
-            --primary-light: #48d1e8;
-            --accent: #00e5c3;
-            --dark: #101820;
-            --dark-mid: #1a2530;
-            --dark-light: #243040;
-            --teal-muted: #a0cad2;
-            --light: #e8f4f8;
-            --light-alt: #f0f7fa;
-            --white: #f5fafc;
-            --gray-400: #8899a6;
-            --gray-600: #5c7080;
-            --text-on-dark: #e0eef2;
-            --text-on-light: #101820;
-        }
-        
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        body {
-            font-family: 'Inter', -apple-system, sans-serif;
-            color: var(--text-on-light);
-            line-height: 1.7;
-            background: var(--dark);
-        }
-        
-        .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
-        
-        /* Header */
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(16, 24, 32, 0.95);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            padding: 16px 24px;
-            border-bottom: 1px solid rgba(0, 180, 216, 0.15);
-        }
-        
-        .header-content {
-            max-width: 1100px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo { height: 42px; border-radius: 8px; }
-        
-        nav { display: flex; gap: 28px; align-items: center; }
-        nav a { color: var(--teal-muted); text-decoration: none; font-weight: 500; font-size: 0.95rem; transition: color 0.2s; }
-        nav a:hover { color: var(--primary); }
-        
-        .nav-btn {
-            background: var(--primary);
-            color: var(--dark) !important;
-            padding: 12px 24px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.2s;
-        }
-        
-        .nav-btn:hover { background: var(--accent); transform: translateY(-1px); }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ROIFLO — Tracking the Energy Behind AI</title>
+<meta name="description" content="Market intelligence on the nuclear reactors, fuel supply, and capital powering the AI data center buildout. Company tracker + weekly brief.">
+<link rel="canonical" href="https://roiflo.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ROIFLO">
+<meta property="og:title" content="ROIFLO — Tracking the Energy Behind AI">
+<meta property="og:description" content="Who powers the AI buildout? Tracking nuclear startups, fuel supply, and the capital behind the data center energy race.">
+<meta property="og:url" content="https://roiflo.com/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ROIFLO — Tracking the Energy Behind AI">
+<meta name="twitter:description" content="Nuclear × AI data centers: the tracker and weekly brief.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "ROIFLO",
+  "url": "https://roiflo.com",
+  "description": "Market intelligence on nuclear energy for AI data centers — company tracker and weekly brief covering reactors, fuel supply, and capital.",
+  "founder": {"@type": "Person", "name": "Richie Dasilva", "sameAs": "https://www.linkedin.com/in/richdasilva"},
+  "parentOrganization": {"@type": "Organization", "name": "Nullnosis", "url": "https://nullnosis.com"},
+  "email": "hello@nullnosis.com",
+  "knowsAbout": ["Small Modular Reactors", "Nuclear Energy", "AI Data Centers", "HALEU", "Advanced Nuclear Fuel", "Energy Infrastructure", "Venture Capital"]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "ROIFLO Nuclear × AI Company Tracker",
+  "description": "Companies building the nuclear energy supply for AI data centers: reactor developers, fuel suppliers, and enabling software.",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "item": {"@type": "Organization", "name": "Aalo Atomics", "description": "Modular reactors designed for AI data centers. ~$100M Series B led by Valor Equity Partners."}},
+    {"@type": "ListItem", "position": 2, "item": {"@type": "Organization", "name": "Standard Nuclear", "description": "TRISO advanced reactor fuel manufacturing. $140M Series A (Decisive Point, Chevron Technology Ventures, a16z)."}},
+    {"@type": "ListItem", "position": 3, "item": {"@type": "Organization", "name": "General Matter", "description": "HALEU enrichment. $50M Series A led by Founders Fund; $900M DOE IDIQ contract."}},
+    {"@type": "ListItem", "position": 4, "item": {"@type": "Organization", "name": "Radiant Nuclear", "description": "Portable 1 MWe microreactors, mass-production model. $300M+ Series D."}},
+    {"@type": "ListItem", "position": 5, "item": {"@type": "Organization", "name": "Last Energy", "description": "20 MWe micro nuclear plants for industrial and data center customers."}},
+    {"@type": "ListItem", "position": 6, "item": {"@type": "Organization", "name": "Valar Atomics", "description": "SMR developer; reported raise at ~$6B valuation with Sequoia."}},
+    {"@type": "ListItem", "position": 7, "item": {"@type": "Organization", "name": "NuCube Energy", "description": "Early-stage reactor startup; $13M round (2026)."}},
+    {"@type": "ListItem", "position": 8, "item": {"@type": "Organization", "name": "Clean Core Thorium Energy", "description": "Thorium-based ANEEL fuel for heavy-water reactors; ~$15M seed."}},
+    {"@type": "ListItem", "position": 9, "item": {"@type": "Organization", "name": "Deep Fission", "description": "Borehole-deployed reactors; data center power agreements announced."}},
+    {"@type": "ListItem", "position": 10, "item": {"@type": "Organization", "name": "Steady Energy", "description": "Finnish SMR developer (district heating focus); €22M raised, pilot under construction."}},
+    {"@type": "ListItem", "position": 11, "item": {"@type": "Organization", "name": "Atomic Canyon", "description": "AI software for nuclear licensing and NRC document search."}},
+    {"@type": "ListItem", "position": 12, "item": {"@type": "Organization", "name": "X-energy", "description": "Xe-100 HTGR developer; Amazon-backed, utility partnerships."}}
+  ]
+}
+</script>
+<style>
+  :root{
+    --bg:#070b12;
+    --bg2:#0b1019;
+    --panel:rgba(55,214,255,.035);
+    --line:rgba(55,214,255,.13);
+    --txt:#dfe8f2;
+    --dim:#7f8b9c;
+    --cher:#37d6ff;      /* cherenkov blue */
+    --amber:#ffb454;     /* capital */
+    --green:#7ef0c0;     /* live/active */
+    --glow:rgba(55,214,255,.35);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--txt);font-family:'Space Grotesk',sans-serif;overflow-x:hidden;line-height:1.6}
+  ::selection{background:var(--cher);color:#07131a}
+  .mono{font-family:'JetBrains Mono',monospace}
+  #cur{position:fixed;inset:0;z-index:0;opacity:.5}
+  main,nav,footer{position:relative;z-index:2}
 
-        /* Mobile menu */
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            color: var(--primary);
-            font-size: 1.5rem;
-            cursor: pointer;
-            padding: 8px;
-        }
-        
-        /* Hero */
-        .hero {
-            padding: 140px 24px 80px;
-            background: linear-gradient(135deg, var(--dark) 0%, var(--dark-mid) 50%, var(--dark) 100%);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -20%;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(0, 180, 216, 0.08) 0%, transparent 70%);
-            border-radius: 50%;
-        }
-        
-        .hero-inner {
-            max-width: 1100px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            gap: 50px;
-            position: relative;
-        }
-        
-        .hero-content { flex: 1; }
-        .hero-visual { flex: 1; text-align: center; position: relative; }
-        .hero-visual img { 
-            width: 100%; 
-            max-width: 500px; 
-            border-radius: 20px;
-            filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
-        }
-        
-        .hero h1 {
-            font-size: 2.8rem;
-            font-weight: 800;
-            line-height: 1.2;
-            margin-bottom: 20px;
-            color: var(--white);
-        }
-        
-        .hero h1 span { color: var(--primary); }
-        
-        .hero p {
-            font-size: 1.15rem;
-            color: var(--gray-400);
-            margin-bottom: 28px;
-            max-width: 480px;
-        }
-        
-        .hero-sub {
-            font-size: 0.95rem;
-            color: var(--gray-400);
-            margin-top: 16px;
-        }
-        
-        .hero-sub a { color: var(--primary); text-decoration: none; font-weight: 500; }
-        
-        .cta-btn {
-            display: inline-block;
-            background: var(--primary);
-            color: var(--dark);
-            padding: 16px 32px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.05rem;
-            transition: all 0.2s;
-            box-shadow: 0 4px 20px rgba(0, 180, 216, 0.3);
-        }
-        
-        .cta-btn:hover {
-            background: var(--accent);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 28px rgba(0, 229, 195, 0.35);
-        }
-        
-        .cta-secondary {
-            display: inline-block;
-            color: var(--teal-muted);
-            padding: 16px 24px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.05rem;
-            margin-left: 12px;
-            transition: color 0.2s;
-        }
-        
-        .cta-secondary:hover { color: var(--primary); }
-        
-        /* Section Styling */
-        section { padding: 80px 24px; }
-        
-        .section-title {
-            font-size: 2rem;
-            text-align: center;
-            margin-bottom: 16px;
-            color: var(--white);
-        }
-        
-        .section-subtitle {
-            text-align: center;
-            color: var(--gray-400);
-            margin-bottom: 48px;
-            font-size: 1.1rem;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
+  nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:16px 5vw;backdrop-filter:blur(14px);background:rgba(7,11,18,.65);border-bottom:1px solid var(--line)}
+  .wordmark{font-family:'JetBrains Mono',monospace;font-weight:700;font-size:17px;letter-spacing:.18em;color:var(--txt);text-decoration:none}
+  .wordmark span{color:var(--cher)}
+  .wordmark i{font-style:normal;color:var(--amber)}
+  .nav-links{display:flex;gap:30px;align-items:center}
+  .nav-links a{color:var(--dim);text-decoration:none;font-size:13px;letter-spacing:.12em;text-transform:uppercase;transition:color .25s}
+  .nav-links a:hover{color:var(--cher)}
+  .btn{display:inline-block;padding:12px 26px;border-radius:8px;border:1px solid var(--cher);color:var(--txt);text-decoration:none;font-size:13px;letter-spacing:.1em;text-transform:uppercase;background:rgba(55,214,255,.08);transition:box-shadow .3s,background .3s}
+  .btn:hover{box-shadow:0 0 26px var(--glow)}
+  .btn.solid{background:var(--cher);border-color:var(--cher);color:#07131a;font-weight:600}
+  .btn.solid:hover{background:#6ae1ff}
+  @media(max-width:760px){.nav-links a:not(.btn){display:none}}
 
-        /* Section illustration */
-        .section-illustration {
-            width: 100%;
-            max-width: 700px;
-            margin: 0 auto 40px;
-            display: block;
-            border-radius: 16px;
-            /* Subtle blend with dark background */
-            mask-image: linear-gradient(to bottom, transparent 0%, black 5%, black 95%, transparent 100%);
-            -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 5%, black 95%, transparent 100%);
-        }
+  .hero{min-height:92vh;display:flex;flex-direction:column;justify-content:center;padding:110px 5vw 40px}
+  .tag{color:var(--cher);font-size:12px;letter-spacing:.3em;text-transform:uppercase;margin-bottom:20px}
+  .tag::before{content:"// "}
+  h1{font-size:clamp(2.4rem,6.5vw,5.2rem);font-weight:700;line-height:1.06;letter-spacing:-.02em;max-width:15ch}
+  h1 em{font-style:normal;color:var(--cher);text-shadow:0 0 30px var(--glow)}
+  .hero p{max-width:52ch;color:var(--dim);margin:26px 0 36px;font-size:1.06rem}
+  .hero-cta{display:flex;gap:16px;flex-wrap:wrap}
 
-        /* Mascot accent — smaller, decorative */
-        .section-mascot {
-            width: 80px;
-            margin: 0 auto 20px;
-            display: block;
-            filter: drop-shadow(0 0 15px rgba(0, 180, 216, 0.15));
-        }
-        
-        /* Problem Section */
-        .problems { background: var(--dark-mid); }
-        
-        .problem-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 28px;
-            max-width: 950px;
-            margin: 0 auto;
-        }
-        
-        .problem-card {
-            background: var(--dark-light);
-            padding: 28px;
-            border-radius: 16px;
-            text-align: center;
-            border: 1px solid rgba(0, 180, 216, 0.1);
-            transition: border-color 0.3s, transform 0.2s;
-        }
-        
-        .problem-card:hover {
-            border-color: rgba(0, 180, 216, 0.3);
-            transform: translateY(-2px);
-        }
-        
-        .problem-card .icon { font-size: 2.2rem; margin-bottom: 14px; }
-        .problem-card h3 { font-size: 1.1rem; margin-bottom: 10px; color: var(--primary); }
-        .problem-card p { color: var(--gray-400); font-size: 0.95rem; }
-        
-        /* Who It's For */
-        .who-its-for { background: var(--dark); }
-        
-        .audience-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 24px;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        
-        .audience-card {
-            background: var(--dark-mid);
-            padding: 28px;
-            border-radius: 16px;
-            border-left: 4px solid var(--primary);
-        }
-        
-        .audience-card h3 {
-            font-size: 1.15rem;
-            margin-bottom: 12px;
-            color: var(--white);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .audience-card h3 .icon { font-size: 1.3rem; }
-        .audience-card p { color: var(--gray-400); font-size: 0.95rem; margin-bottom: 12px; }
-        
-        .audience-card .example {
-            background: var(--dark-light);
-            padding: 12px 16px;
-            border-radius: 8px;
-            font-size: 0.9rem;
-            font-style: italic;
-            border-left: 2px solid var(--primary);
-            color: var(--teal-muted);
-        }
-        
-        /* Case Studies */
-        .case-studies { background: var(--dark-mid); }
-        
-        .case-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 28px;
-            max-width: 950px;
-            margin: 0 auto;
-        }
-        
-        .case-card {
-            background: var(--dark-light);
-            border-radius: 16px;
-            padding: 32px;
-            border: 1px solid rgba(0, 180, 216, 0.1);
-            transition: border-color 0.3s;
-        }
+  .statbar{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;background:var(--line);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .stat{background:var(--bg2);padding:26px 5vw;text-align:left}
+  .stat b{display:block;font-size:1.6rem;color:var(--cher);font-weight:700}
+  .stat span{color:var(--dim);font-size:12px;letter-spacing:.15em;text-transform:uppercase}
 
-        .case-card:hover {
-            border-color: rgba(0, 180, 216, 0.25);
-        }
-        
-        .case-card .case-type {
-            display: inline-block;
-            background: rgba(0, 180, 216, 0.1);
-            color: var(--primary);
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            margin-bottom: 16px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        
-        .case-card h3 {
-            color: var(--white);
-            font-size: 1.2rem;
-            margin-bottom: 12px;
-        }
-        
-        .case-card .case-problem {
-            color: var(--gray-400);
-            font-size: 0.95rem;
-            margin-bottom: 16px;
-            padding-bottom: 16px;
-            border-bottom: 1px solid rgba(0, 180, 216, 0.1);
-        }
-        
-        .case-card .case-result {
-            color: var(--teal-muted);
-            font-size: 0.95rem;
-        }
-        
-        .case-card .case-result strong {
-            color: var(--primary);
-        }
-        
-        .case-note {
-            text-align: center;
-            color: var(--gray-600);
-            font-size: 0.85rem;
-            font-style: italic;
-            margin-top: 32px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        /* Range Section */
-        .range-section { background: var(--dark); }
-        
-        .range-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 28px;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        
-        .range-card {
-            background: var(--dark-mid);
-            padding: 28px;
-            border-radius: 16px;
-            border-top: 3px solid var(--primary);
-        }
-        
-        .range-card h3 {
-            color: var(--white);
-            font-size: 1.1rem;
-            margin-bottom: 8px;
-        }
-        
-        .range-card .range-label {
-            color: var(--primary);
-            font-size: 0.85rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 12px;
-        }
-        
-        .range-card p { color: var(--gray-400); font-size: 0.95rem; }
-        
-        .range-card ul {
-            list-style: none;
-            margin-top: 12px;
-        }
-        
-        .range-card ul li {
-            color: var(--gray-400);
-            font-size: 0.9rem;
-            padding: 4px 0;
-            padding-left: 20px;
-            position: relative;
-        }
-        
-        .range-card ul li::before {
-            content: '→';
-            position: absolute;
-            left: 0;
-            color: var(--primary);
-        }
-        
-        /* How It Works */
-        .how-it-works { background: var(--dark-mid); }
-        
-        .steps {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        
-        .step {
-            text-align: center;
-            flex: 1;
-        }
-        
-        .step-number {
-            width: 48px;
-            height: 48px;
-            background: var(--primary);
-            color: var(--dark);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 800;
-            font-size: 1.2rem;
-            margin: 0 auto 16px;
-        }
-        
-        .step h3 { color: var(--white); margin-bottom: 8px; }
-        .step p { color: var(--gray-400); font-size: 0.9rem; }
+  section{padding:96px 5vw}
+  .sec-label{color:var(--cher);font-size:12px;letter-spacing:.3em;text-transform:uppercase;margin-bottom:14px}
+  .sec-label::before{content:"["} .sec-label::after{content:"]"}
+  h2{font-size:clamp(1.8rem,4vw,3rem);font-weight:600;line-height:1.12;letter-spacing:-.015em;max-width:26ch}
+  .lede{color:var(--dim);max-width:60ch;margin-top:16px}
 
-        /* About / Why ROIFLO */
-        .about-section { background: var(--dark); }
+  /* tracker */
+  .tracker{margin-top:48px;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  .trow{display:grid;grid-template-columns:2fr 1fr 2fr 1.6fr;gap:16px;padding:18px 22px;border-bottom:1px solid var(--line);align-items:center;transition:background .2s}
+  .trow:last-child{border-bottom:none}
+  .trow:hover{background:var(--panel)}
+  .thead{background:var(--bg2);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--dim)}
+  .tname{font-weight:600;font-size:1.02rem}
+  .tname small{display:block;font-weight:400;color:var(--dim);font-size:.8rem;margin-top:2px}
+  .chip{display:inline-block;font-size:10px;letter-spacing:.14em;padding:4px 10px;border-radius:999px;border:1px solid;text-transform:uppercase;font-family:'JetBrains Mono',monospace}
+  .chip.reactor{color:var(--cher);border-color:rgba(55,214,255,.4)}
+  .chip.fuel{color:var(--amber);border-color:rgba(255,180,84,.4)}
+  .chip.software{color:var(--green);border-color:rgba(126,240,192,.4)}
+  .tdesc{color:var(--dim);font-size:.88rem}
+  .tcap{font-size:.85rem;color:var(--txt)}
+  .tcap small{color:var(--dim);display:block;font-size:.75rem}
+  @media(max-width:860px){.trow{grid-template-columns:1fr;gap:6px}.thead{display:none}}
+  .tracker-note{color:var(--dim);font-size:.85rem;margin-top:16px}
 
-        .about-layout {
-            display: flex;
-            align-items: flex-start;
-            gap: 48px;
-            max-width: 950px;
-            margin: 0 auto;
-        }
+  /* brief */
+  .brief-box{border:1px solid var(--line);border-radius:16px;padding:44px 5vw;margin-top:44px;background:radial-gradient(600px circle at 15% 0%,rgba(55,214,255,.08),transparent 55%),var(--bg2);display:flex;flex-wrap:wrap;gap:30px;justify-content:space-between;align-items:center}
+  .brief-box h3{font-size:1.4rem;margin-bottom:8px}
+  .brief-box p{color:var(--dim);max-width:48ch}
 
-        .about-text { flex: 1; }
-        .about-text h2 { color: var(--white); font-size: 1.8rem; margin-bottom: 20px; }
-        .about-text h3 { color: var(--primary); font-size: 1.1rem; margin-bottom: 10px; margin-top: 24px; }
-        .about-text p { color: var(--gray-400); margin-bottom: 14px; font-size: 1.02rem; line-height: 1.75; }
+  /* audit */
+  .split{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;margin-top:44px;align-items:start}
+  @media(max-width:860px){.split{grid-template-columns:1fr}}
+  .split p{color:var(--dim);margin-bottom:16px}
+  .checks{border-top:1px solid var(--line)}
+  .checks div{padding:16px 4px;border-bottom:1px solid var(--line);display:flex;gap:14px;align-items:baseline}
+  .checks b{color:var(--cher);font-family:'JetBrains Mono',monospace;font-size:.8rem}
 
-        .about-visual { flex: 0 0 320px; }
-        .about-visual img { 
-            width: 100%; 
-            border-radius: 16px; 
-            filter: drop-shadow(0 5px 20px rgba(0, 180, 216, 0.15));
-        }
-
-        .about-signature {
-            color: var(--primary);
-            font-weight: 600;
-            font-size: 1.1rem;
-            margin-top: 24px;
-        }
-
-        .about-signature span { color: var(--gray-400); font-weight: 400; font-size: 0.9rem; }
-
-        /* Blog Section */
-        .blog-section { background: var(--dark-mid); }
-
-        .blog-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 28px;
-            max-width: 950px;
-            margin: 0 auto;
-        }
-
-        .blog-card {
-            background: var(--dark-light);
-            border-radius: 16px;
-            overflow: hidden;
-            border: 1px solid rgba(0, 180, 216, 0.08);
-            transition: border-color 0.3s, transform 0.2s;
-        }
-
-        .blog-card:hover {
-            border-color: rgba(0, 180, 216, 0.25);
-            transform: translateY(-3px);
-        }
-
-        .blog-card-image {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-            object-position: center;
-        }
-
-        .blog-card-body {
-            padding: 20px;
-        }
-
-        .blog-card-tag {
-            display: inline-block;
-            background: rgba(0, 180, 216, 0.1);
-            color: var(--primary);
-            padding: 3px 10px;
-            border-radius: 12px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 10px;
-        }
-
-        .blog-card h3 {
-            color: var(--white);
-            font-size: 1.05rem;
-            margin-bottom: 8px;
-            line-height: 1.4;
-        }
-
-        .blog-card p {
-            color: var(--gray-400);
-            font-size: 0.9rem;
-            margin-bottom: 14px;
-        }
-
-        .blog-card-link {
-            color: var(--primary);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: color 0.2s;
-        }
-
-        .blog-card-link:hover { color: var(--accent); }
-        
-        /* FAQ */
-        .faq { background: var(--dark); }
-        
-        .faq-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 24px;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        
-        .faq-item {
-            background: var(--dark-mid);
-            padding: 24px;
-            border-radius: 12px;
-            border: 1px solid rgba(0, 180, 216, 0.08);
-        }
-        
-        .faq-item h3 { color: var(--white); font-size: 1rem; margin-bottom: 10px; }
-        .faq-item p { color: var(--gray-400); font-size: 0.95rem; }
-        
-        /* CTA */
-        .cta-section {
-            padding: 80px 24px;
-            text-align: center;
-            background: linear-gradient(135deg, var(--dark) 0%, var(--dark-mid) 100%);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .cta-inner {
-            display: flex;
-            align-items: center;
-            gap: 48px;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        .cta-mascot-large {
-            flex: 0 0 320px;
-            max-width: 320px;
-        }
-
-        .cta-mascot-large img {
-            width: 100%;
-            border-radius: 20px;
-            filter: drop-shadow(0 0 40px rgba(0, 180, 216, 0.2));
-        }
-
-        .cta-text {
-            flex: 1;
-            text-align: left;
-        }
-        
-        .cta-section h2 { color: var(--white); font-size: 2rem; margin-bottom: 16px; }
-        .cta-section p { color: var(--gray-400); margin-bottom: 28px; font-size: 1.1rem; }
-        
-        .cta-mascot {
-            width: 90px;
-            margin: 0 auto 24px;
-            display: block;
-            filter: drop-shadow(0 0 20px rgba(0, 180, 216, 0.15));
-        }
-        
-        /* Footer */
-        footer {
-            padding: 32px 24px;
-            text-align: center;
-            background: var(--dark);
-            color: var(--gray-400);
-            font-size: 0.9rem;
-            border-top: 1px solid rgba(0, 180, 216, 0.1);
-        }
-        
-        footer a { color: var(--primary); text-decoration: none; }
-        footer a:hover { color: var(--accent); }
-        
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero-inner { flex-direction: column-reverse; text-align: center; }
-            .hero h1 { font-size: 2rem; }
-            .hero p { margin: 0 auto 28px; }
-            .problem-grid { grid-template-columns: 1fr; }
-            .audience-grid { grid-template-columns: 1fr; }
-            .case-grid { grid-template-columns: 1fr; }
-            .range-grid { grid-template-columns: 1fr; }
-            .steps { flex-direction: column; gap: 32px; }
-            .about-layout { flex-direction: column; }
-            .about-visual { flex: none; width: 100%; }
-            .blog-grid { grid-template-columns: 1fr; }
-            .faq-grid { grid-template-columns: 1fr; }
-            nav { display: none; }
-            .mobile-menu-btn { display: block; }
-            .cta-secondary { display: block; margin: 12px 0 0 0; }
-            .section-illustration { max-width: 100%; }
-            .cta-inner { flex-direction: column; text-align: center; }
-            .cta-text { text-align: center; }
-            .cta-mascot-large { flex: none; max-width: 220px; margin: 0 auto; }
-        }
-    </style>
+  footer{padding:60px 5vw 36px;border-top:1px solid var(--line);margin-top:60px}
+  .foot{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;color:var(--dim);font-size:13px}
+  .foot a{color:var(--dim);text-decoration:none}
+  .foot a:hover{color:var(--cher)}
+  .reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+</style>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="header-content">
-            <img src="logo.webp" alt="ROIFLO" class="logo">
-            <nav id="main-nav">
-                <a href="#problems">The Problem</a>
-                <a href="#who-its-for">Who It's For</a>
-                <a href="#results">Results</a>
-                <a href="#about">About</a>
-                <a href="#blog">Insights</a>
-                <a href="#faq">FAQ</a>
-                <a href="#contact" class="nav-btn">Let's Talk</a>
-            </nav>
-            <button class="mobile-menu-btn" onclick="document.getElementById('main-nav').style.display = document.getElementById('main-nav').style.display === 'flex' ? 'none' : 'flex'">☰</button>
-        </div>
-    </header>
-    
-    <!-- Hero -->
-    <section class="hero">
-        <div class="hero-inner">
-            <div class="hero-content">
-                <h1>Stop Losing Leads.<br><span>Start Running Smoothly.</span></h1>
-                <p>You started a business to do great work — not to spend your nights chasing follow-ups, copying data between apps, and wondering what fell through the cracks. I fix that.</p>
-                <a href="#contact" class="cta-btn">Book a Free Strategy Call</a>
-                <a href="#results" class="cta-secondary">See How It Works →</a>
-                <p class="hero-sub">A <a href="https://nullnosis.com" target="_blank">Nullnosis</a> service — human strategy, organized delivery.</p>
-            </div>
-            <div class="hero-visual">
-                <img src="assets/hero_illustration.webp" alt="ROIFLO - Connected business ecosystem with automation, analytics, and communication flowing together">
-            </div>
-        </div>
-    </section>
-    
-    <!-- The Problem -->
-    <section class="problems" id="problems">
-        <div class="container">
-            <img src="assets/problems_illustration.webp" alt="Business chaos to organized flow" class="section-illustration">
-            <h2 class="section-title">Sound Familiar?</h2>
-            <p class="section-subtitle">These are the things business owners tell me before we start working together.</p>
-            <div class="problem-grid">
-                <div class="problem-card">
-                    <div class="icon">😩</div>
-                    <h3>Leads Slip Through</h3>
-                    <p>Someone reached out on Saturday. You saw it Monday. By then they already hired someone else. It keeps happening.</p>
-                </div>
-                <div class="problem-card">
-                    <div class="icon">🔄</div>
-                    <h3>Everything Is Manual</h3>
-                    <p>You are copying info from emails to spreadsheets to calendars. The same data, typed three times. There has to be a better way.</p>
-                </div>
-                <div class="problem-card">
-                    <div class="icon">📱</div>
-                    <h3>Too Many Apps, No Flow</h3>
-                    <p>Instagram, email, Google, your booking tool, your invoicing app — none of them talk to each other. You are the glue holding it together.</p>
-                </div>
-                <div class="problem-card">
-                    <div class="icon">🤷</div>
-                    <h3>No Idea What Is Working</h3>
-                    <p>You post content, run ads, send emails — but you cannot tell what is actually bringing in business and what is wasting your time.</p>
-                </div>
-                <div class="problem-card">
-                    <div class="icon">⏰</div>
-                    <h3>Follow-Ups Fall Off</h3>
-                    <p>You meant to follow up with that prospect. Then a week passed. Then a month. Now it is awkward. This keeps costing you money.</p>
-                </div>
-                <div class="problem-card">
-                    <div class="icon">😤</div>
-                    <h3>You Are the Bottleneck</h3>
-                    <p>Nothing moves unless you personally do it. You cannot take a day off without things piling up. The business runs on your memory.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Who It's For -->
-    <section class="who-its-for" id="who-its-for">
-        <div class="container">
-            <h2 class="section-title">Built for Businesses Like Yours</h2>
-            <p class="section-subtitle">I work with small businesses and startups that are growing but do not have the time or tech skills to build systems themselves.</p>
-            <div class="audience-grid">
-                <div class="audience-card">
-                    <h3><span class="icon">✂️</span> Creative Studios & Shops</h3>
-                    <p>Tattoo shops, salons, photography studios, design firms — creative businesses where the owner is the talent and the manager. You need your admin to run itself.</p>
-                    <div class="example">"New booking request → Instant confirmation → Deposit reminder → Day-before prep checklist → Post-visit follow-up"</div>
-                </div>
-                <div class="audience-card">
-                    <h3><span class="icon">📍</span> Local Brands & Venues</h3>
-                    <p>Restaurants, event spaces, retail shops — businesses with a physical location that need to manage reviews, social media, and customer communication without spending all day on it.</p>
-                    <div class="example">"New review posted → Response draft ready → Social content scheduled → Monthly report in your inbox"</div>
-                </div>
-                <div class="audience-card">
-                    <h3><span class="icon">🚀</span> Startups Finding Their Feet</h3>
-                    <p>Small teams doing too much manually. If you are copy-pasting data between apps or forgetting to follow up with leads, I can fix that before it costs you more.</p>
-                    <div class="example">"New signup → Welcome email → Database entry → Team notification → 3-day check-in"</div>
-                </div>
-                <div class="audience-card">
-                    <h3><span class="icon">🎯</span> Solo Operators</h3>
-                    <p>One-person businesses that need to operate like a team. Consultants, coaches, freelancers — you are good at what you do, but the business side is eating your time.</p>
-                    <div class="example">"Morning briefing → Task list → Content scheduled → Invoices tracked → Pipeline updated"</div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Results -->
-    <section class="case-studies" id="results">
-        <div class="container">
-            <img src="roiflo_success.webp" alt="Results" class="section-mascot">
-            <h2 class="section-title">What This Looks Like in Practice</h2>
-            <p class="section-subtitle">Real problems I have solved for real businesses. Names kept private, results kept honest.</p>
-            <div class="case-grid">
-                <div class="case-card">
-                    <div class="case-type">Creative Studio — NYC</div>
-                    <h3>From Chaos to Calm in 30 Days</h3>
-                    <p class="case-problem">A busy creative studio in NYC was losing leads because the owner could not respond fast enough. Content was scattered across phones, emails, and group chats. No one knew what was posted where or when to follow up.</p>
-                    <p class="case-result"><strong>What I built:</strong> Instant lead capture and response, automated content approval from their phone, daily business briefings, website monitoring, and a content calendar that keeps everything on track. Lead response went from hours to minutes. The owner got roughly 10 hours a week back.</p>
-                </div>
-                <div class="case-card">
-                    <div class="case-type">Service Business — Consulting</div>
-                    <h3>Never Miss a Follow-Up Again</h3>
-                    <p class="case-problem">A solo consultant was juggling prospects across sticky notes, email threads, and mental reminders. Proposals would go out and then disappear into silence because there was no system to track or follow up.</p>
-                    <p class="case-result"><strong>What I built:</strong> A simple pipeline that tracks every lead from first contact to close. Automatic follow-up reminders, proposal tracking, and a weekly summary of what needs attention. No more deals dying in silence.</p>
-                </div>
-                <div class="case-card">
-                    <div class="case-type">Local Brand — Events</div>
-                    <h3>Social Media Without the Stress</h3>
-                    <p class="case-problem">An event space was posting sporadically, had no content strategy, and was not responding to reviews. Their online presence did not reflect the quality of their actual business.</p>
-                    <p class="case-result"><strong>What I built:</strong> A content system that turns raw photos into formatted posts with captions, schedules them across platforms, and drafts review responses. The owner approves everything with one tap on their phone.</p>
-                </div>
-                <div class="case-card">
-                    <div class="case-type">Startup — E-Commerce</div>
-                    <h3>From Spreadsheets to Systems</h3>
-                    <p class="case-problem">A small online brand was tracking orders, inventory, and customer messages across four different spreadsheets. Things got missed. Customers got frustrated. The team spent more time organizing than selling.</p>
-                    <p class="case-result"><strong>What I built:</strong> Connected their store, email, and support tools into one flow. New orders trigger fulfillment steps automatically. Customer messages get routed and tracked. Weekly reports show what is selling and what needs attention.</p>
-                </div>
-            </div>
-            <p class="case-note">These are based on real engagements. Some details are generalized to protect client privacy. Results vary based on business type and scope.</p>
-        </div>
-    </section>
-    
-    <!-- Range of Complexity -->
-    <section class="range-section">
-        <div class="container">
-            <h2 class="section-title">Simple or Complex — I Meet You Where You Are</h2>
-            <p class="section-subtitle">Not every business needs the same level of systems. Some need one thing fixed. Others need the whole operation organized.</p>
-            <div class="range-grid">
-                <div class="range-card">
-                    <div class="range-label">Common Frustrations</div>
-                    <h3>Quick Fixes That Save Hours</h3>
-                    <p>Sometimes one system solves the biggest headache.</p>
-                    <ul>
-                        <li>Auto-respond to new leads instantly</li>
-                        <li>Send follow-up reminders so nothing slips</li>
-                        <li>Schedule social posts from your phone</li>
-                        <li>Get a daily summary of what needs attention</li>
-                        <li>Stop copy-pasting between apps</li>
-                    </ul>
-                </div>
-                <div class="range-card">
-                    <div class="range-label">Full Operations</div>
-                    <h3>Your Business, Running Like a Machine</h3>
-                    <p>For businesses ready to get everything organized.</p>
-                    <ul>
-                        <li>Complete lead pipeline from inquiry to close</li>
-                        <li>Content creation, approval, and publishing flow</li>
-                        <li>Client onboarding with automatic setup</li>
-                        <li>Invoice tracking and payment reminders</li>
-                        <li>Analytics and reporting on autopilot</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- How It Works -->
-    <section class="how-it-works" id="how-it-works">
-        <div class="container">
-            <img src="assets/process_illustration.webp" alt="Four-step process from conversation to running system" class="section-illustration">
-            <h2 class="section-title">How We Work Together</h2>
-            <p class="section-subtitle">No confusing software to learn. No jargon. I handle the technical stuff.</p>
-            <div class="steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <h3>We Talk</h3>
-                    <p>A quick call to understand your business, your frustrations, and what is eating up your time.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <h3>I Map It Out</h3>
-                    <p>I show you exactly what I would build — in plain language, with clear outcomes and a fixed quote.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <h3>I Build It</h3>
-                    <p>I create, test, and deploy your systems. You approve everything before it goes live.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">4</div>
-                    <h3>It Runs</h3>
-                    <p>Your business keeps flowing. I monitor, maintain, and improve things as you grow.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<canvas id="cur"></canvas>
 
-    <!-- About / Why ROIFLO -->
-    <section class="about-section" id="about">
-        <div class="container">
-            <div class="about-layout">
-                <div class="about-text">
-                    <h2>Why ROIFLO Exists</h2>
-                    <p><a href="https://nullnosis.com" target="_blank" style="color: var(--primary); text-decoration: none; font-weight: 600;">Nullnosis</a> is my marketing consultancy — it is where strategy, SEO, content, and brand positioning live. That is the thinking side of the business. The "what should you do and why" side.</p>
-                    <p>But I kept running into the same problem with clients: great strategy means nothing if the execution is a mess. Leads come in but nobody follows up. Content gets created but never gets posted. Reports exist but nobody reads them. The problem was not the plan — it was the plumbing.</p>
-                    
-                    <h3>ROIFLO is the plumbing.</h3>
-                    <p>It is where the deep technical work lives — the automation, the data flow, the systems that make everything actually run. I separated it from Nullnosis because the audience is different. Some people come to me for marketing strategy. Some people come to me because their business is drowning in manual work and they need someone to fix the infrastructure. Some need both.</p>
-                    <p>Think of it this way: Nullnosis figures out what your business should be doing. ROIFLO makes sure it actually happens — automatically, reliably, without you having to babysit it.</p>
-                    <p>Same person behind both. Same standards. Same commitment to building things that actually work instead of things that just look impressive on a slide deck.</p>
-                    
-                    <p class="about-signature">— Richie <span>/ Founder, Nullnosis & ROIFLO</span></p>
-                </div>
-                <div class="about-visual">
-                    <img src="assets/about_illustration.webp" alt="Nullnosis strategy flowing into ROIFLO technical execution">
-                </div>
-            </div>
-        </div>
-    </section>
+<nav>
+  <a class="wordmark" href="#top">ROI<span>FLO</span><i>_</i></a>
+  <div class="nav-links">
+    <a href="#tracker">Tracker</a>
+    <a href="#brief">The Brief</a>
+    <a href="#visibility">For Companies</a>
+    <a href="#about">About</a>
+    <a class="btn solid" href="mailto:hello@nullnosis.com?subject=Subscribe%20to%20the%20ROIFLO%20Brief&body=Add%20me%20to%20the%20weekly%20brief.%0A%0AName%3A%0ACompany%20(optional)%3A">Get the Brief</a>
+  </div>
+</nav>
 
-    <!-- Blog / Insights -->
-    <section class="blog-section" id="blog">
-        <div class="container">
-            <h2 class="section-title">Insights</h2>
-            <p class="section-subtitle">Practical thinking on marketing, systems, and running a business without burning out.</p>
-            <div class="blog-grid">
-                <div class="blog-card">
-                    <img src="assets/blog_seo.webp" alt="SEO strategy" class="blog-card-image">
-                    <div class="blog-card-body">
-                        <div class="blog-card-tag">SEO</div>
-                        <h3>Why Most Small Businesses Get SEO Wrong</h3>
-                        <p>You do not need 50 blog posts. You need 5 pages that actually answer what your customers are searching for. Here is how to think about SEO when you are small.</p>
-                        <a href="https://nullnosis.com/blog" target="_blank" class="blog-card-link">Read on Nullnosis →</a>
-                    </div>
-                </div>
-                <div class="blog-card">
-                    <img src="assets/blog_systems.webp" alt="Business systems" class="blog-card-image">
-                    <div class="blog-card-body">
-                        <div class="blog-card-tag">Systems</div>
-                        <h3>The Real Cost of Doing Everything Manually</h3>
-                        <p>Every time you copy-paste a lead into a spreadsheet, you are spending $50 worth of your time on a $0 task. Here is how to calculate what manual work actually costs you.</p>
-                        <a href="https://nullnosis.com/blog" target="_blank" class="blog-card-link">Read on Nullnosis →</a>
-                    </div>
-                </div>
-                <div class="blog-card">
-                    <img src="assets/blog_content.webp" alt="Content strategy" class="blog-card-image">
-                    <div class="blog-card-body">
-                        <div class="blog-card-tag">Content</div>
-                        <h3>Content That Works for Service Businesses</h3>
-                        <p>You do not need to go viral. You need to show up consistently where your customers are looking. A simple content framework for businesses that do not have a marketing team.</p>
-                        <a href="https://nullnosis.com/blog" target="_blank" class="blog-card-link">Read on Nullnosis →</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- FAQ -->
-    <section class="faq" id="faq">
-        <div class="container">
-            <h2 class="section-title">Common Questions</h2>
-            <p class="section-subtitle">Straight answers, no jargon.</p>
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <h3>Do I need to be tech-savvy for this?</h3>
-                    <p>No. That is the whole point. I build systems that work in the background. You interact with them through things you already use — your phone, your email, simple approvals. If you can tap a button, you can use what I build.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>Is ROIFLO a software I have to learn?</h3>
-                    <p>No. ROIFLO is a done-for-you service. I do not sell you a tool and leave you to figure it out. I design, build, and manage custom systems for your specific business.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>How much does it cost?</h3>
-                    <p>Projects start at $500 depending on scope. Ongoing support and maintenance retainers start at $250/month. You get a clear quote after our first conversation — no surprises, no hidden fees.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>How long does it take?</h3>
-                    <p>Most systems are up and running within 1-2 weeks. Complex operations with multiple integrations may take 3-4 weeks. You will know the timeline before we start.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>What is the difference between Nullnosis and ROIFLO?</h3>
-                    <p>Nullnosis is the marketing strategy side — SEO, content, brand positioning, and consulting. ROIFLO is the technical execution side — automation, systems, and infrastructure. Same person, different focus areas. Some clients use both.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>What if something breaks?</h3>
-                    <p>I monitor your systems and fix issues fast. With a maintenance plan, you get priority support, regular check-ups, and ongoing improvements as your business evolves.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- CTA -->
-    <section class="cta-section" id="contact">
-        <div class="cta-inner">
-            <div class="cta-mascot-large">
-                <img src="assets/mascot_large.webp" alt="ROIFLO mascot — your automation partner">
-            </div>
-            <div class="cta-text">
-                <h2>Ready to Get Your Business Organized?</h2>
-                <p>Book a free 20-minute call. I will look at what is costing you time and show you what can be fixed — no pressure, no pitch.</p>
-                <a href="mailto:hello@nullnosis.com?subject=ROIFLO%20-%20Let's%20Talk&body=Hi%20Richie%2C%0A%0AI%20am%20interested%20in%20learning%20more%20about%20how%20ROIFLO%20can%20help%20my%20business.%0A%0AMy%20business%3A%20%0AWhat%20is%20frustrating%20me%20most%3A%20%0A%0AThanks!" class="cta-btn">Let's Talk</a>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 ROIFLO — A <a href="https://nullnosis.com" target="_blank">Nullnosis</a> Service</p>
-            <p style="margin-top: 8px; font-size: 0.85rem;">Custom business systems for small businesses and startups that need to stop doing everything manually.</p>
-        </div>
-    </footer>
+<main id="top">
+
+  <header class="hero">
+    <div class="tag mono">market intelligence · nuclear × ai data centers</div>
+    <h1>Tracking the <em>energy</em> behind AI.</h1>
+    <p>AI needs gigawatts. The grid can't keep up. A new industry of reactor developers, fuel suppliers, and dealmakers is racing to power the data center buildout — ROIFLO maps who they are, who funds them, and when the electrons actually arrive.</p>
+    <div class="hero-cta">
+      <a class="btn solid" href="mailto:hello@nullnosis.com?subject=Subscribe%20to%20the%20ROIFLO%20Brief&body=Add%20me%20to%20the%20weekly%20brief.%0A%0AName%3A%0ACompany%20(optional)%3A">Subscribe to the weekly brief</a>
+      <a class="btn" href="#tracker">Explore the tracker</a>
+    </div>
+  </header>
+
+  <div class="statbar">
+    <div class="stat"><b>$3.7B+</b><span>into advanced nuclear, 2025 alone</span></div>
+    <div class="stat"><b>12</b><span>companies tracked (growing weekly)</span></div>
+    <div class="stat"><b>5–7 yrs</b><span>typical grid interconnection queue</span></div>
+    <div class="stat"><b>1–5 GW</b><span>power need of a modern AI campus</span></div>
+  </div>
+
+  <section id="tracker">
+    <div class="sec-label mono reveal">the tracker</div>
+    <h2 class="reveal">Who's building the power supply for AI.</h2>
+    <p class="lede reveal">Reactor developers, fuel suppliers, and enabling software — with the funding, backers, and honest delivery outlook. Updated as the market moves.</p>
+
+    <div class="tracker reveal">
+      <div class="trow thead mono"><div>Company</div><div>Category</div><div>What they do</div><div>Capital & backers</div></div>
+
+      <div class="trow"><div class="tname">Aalo Atomics<small>Austin, TX</small></div><div><span class="chip reactor">Reactor</span></div><div class="tdesc">Factory-built modular reactors designed specifically for AI data centers ("Aalo Pod").</div><div class="tcap">~$100M Series B<small>Valor Equity Partners</small></div></div>
+
+      <div class="trow"><div class="tname">Standard Nuclear<small>Oak Ridge, TN</small></div><div><span class="chip fuel">Fuel</span></div><div class="tdesc">TRISO advanced reactor fuel manufacturing — feeding the Gen IV fleet.</div><div class="tcap">$140M Series A<small>Decisive Point · Chevron Tech Ventures · a16z</small></div></div>
+
+      <div class="trow"><div class="tname">General Matter<small>Los Angeles, CA</small></div><div><span class="chip fuel">Fuel</span></div><div class="tdesc">HALEU enrichment — attacking the sector's #1 supply bottleneck.</div><div class="tcap">$50M Series A + $900M DOE IDIQ<small>Founders Fund</small></div></div>
+
+      <div class="trow"><div class="tname">Radiant Nuclear<small>El Segundo, CA</small></div><div><span class="chip reactor">Reactor</span></div><div class="tdesc">Portable 1 MWe microreactors built for mass production.</div><div class="tcap">$300M+ Series D<small>SpaceX-alumni founded</small></div></div>
+
+      <div class="trow"><div class="tname">Last Energy<small>Washington, DC</small></div><div><span class="chip reactor">Reactor</span></div><div class="tdesc">20 MWe micro plants for industrial and data center customers; deals in Europe & Texas.</div><div class="tcap">Commercial-stage<small>PE-backed</small></div></div>
+
+      <div class="trow"><div class="tname">Valar Atomics<small>California</small></div><div><span class="chip reactor">Reactor</span></div><div class="tdesc">SMR developer moving at startup speed toward test reactors.</div><div class="tcap">Reported ~$6B valuation raise<small>Sequoia (reported)</small></div></div>
+
+      <div class="trow"><div class="tname">NuCube Energy<small>Early stage</small></div><div><span class="chip reactor">Reactor</span></div><div class="tdesc">Early-stage reactor startup; one to watch as the next cohort forms.</div><div class="tcap">$13M (2026)<small>Arizona Nuclear Ventures · ERC</small></div></div>
+
+      <div class="trow"><div class="tname">Clean Core Thorium<small>Chicago, IL</small></div><div><span class="chip fuel">Fuel</span></div><div class="tdesc">Thorium-based ANEEL fuel for existing heavy-water reactors.</div><div class="tcap">~$15M Seed<small>—</small></div></div>
+
+      <div class="trow"><div class="tname">Deep Fission<small>Berkeley, CA</small></div><div><span class="chip reactor">Reactor</span></div><div class="tdesc">Reactors deployed in deep boreholes; data center power agreements announced.</div><div class="tcap">Public (via merger)<small>—</small></div></div>
+
+      <div class="trow"><div class="tname">Steady Energy<small>Finland</small></div><div><span class="chip reactor">Reactor</span></div><div class="tdesc">LDR-50 SMR for district heating; pilot plant under construction.</div><div class="tcap">€22M<small>—</small></div></div>
+
+      <div class="trow"><div class="tname">Atomic Canyon<small>California</small></div><div><span class="chip software">Software</span></div><div class="tdesc">AI for nuclear licensing — search across NRC's document mountain.</div><div class="tcap">Venture-backed<small>—</small></div></div>
+
+      <div class="trow"><div class="tname">X-energy<small>Rockville, MD</small></div><div><span class="chip reactor">Reactor</span></div><div class="tdesc">Xe-100 high-temperature gas reactor; utility and hyperscaler partnerships.</div><div class="tcap">$700M+ raised<small>Amazon · Ares</small></div></div>
+    </div>
+    <p class="tracker-note mono reveal">// full records — fuel path, NRC stage, offtakers, delivery outlook — ship with the brief. Corrections welcome: hello@nullnosis.com</p>
+  </section>
+
+  <section id="brief" style="padding-top:20px">
+    <div class="sec-label mono reveal">the brief</div>
+    <h2 class="reveal">One email a week. The whole energy race, decoded.</h2>
+    <div class="brief-box reveal">
+      <div>
+        <h3>The ROIFLO Brief</h3>
+        <p>Funding rounds, PPAs, NRC milestones, fuel supply moves — translated into plain English, with the one question that matters: <b style="color:var(--txt)">when do the electrons actually arrive?</b> No hype, no jargon walls.</p>
+      </div>
+      <a class="btn solid" href="mailto:hello@nullnosis.com?subject=Subscribe%20to%20the%20ROIFLO%20Brief&body=Add%20me%20to%20the%20weekly%20brief.%0A%0AName%3A%0ACompany%20(optional)%3A">Subscribe free →</a>
+    </div>
+  </section>
+
+  <section id="visibility" style="padding-top:20px">
+    <div class="sec-label mono reveal">for companies in this space</div>
+    <h2 class="reveal">The buyers are searching. Do you show up?</h2>
+    <div class="split">
+      <div class="reveal">
+        <p>Hyperscaler energy teams, utilities, and investors increasingly start their research in search engines and AI assistants. When they ask <i>"who can power a data center by 2030?"</i> — the companies in the answer get the meetings.</p>
+        <p>ROIFLO runs visibility audits for companies in the nuclear and energy buildout: how you appear across Google, ChatGPT, Perplexity, and Gemini — what's missing, what's wrong, and the three fixes that matter. Built by <a href="https://nullnosis.com" style="color:var(--cher)">Nullnosis</a>, the studio behind this tracker.</p>
+        <a class="btn solid" href="https://cal.com/nullnosis/30min" style="margin-top:10px">Request an audit — free intro call</a>
+      </div>
+      <div class="checks reveal mono">
+        <div><b>01</b><span>AI engine presence — are you in the answers?</span></div>
+        <div><b>02</b><span>Search position vs your competitors</span></div>
+        <div><b>03</b><span>Technical: schema, crawlability, buyer pages</span></div>
+        <div><b>04</b><span>News & citation footprint</span></div>
+        <div><b>05</b><span>The 3 fixes that move the needle</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" style="padding-top:20px">
+    <div class="sec-label mono reveal">about</div>
+    <h2 class="reveal">Why ROIFLO exists.</h2>
+    <div class="split">
+      <div class="reveal">
+        <p>AI's growth is now an energy story. The companies solving it — reactor builders, fuel suppliers, grid dealmakers — are moving faster than the coverage explaining them. ROIFLO tracks the space with an operator's questions: who's funded, who can deliver, and when.</p>
+        <p>ROIFLO is built and written by <b style="color:var(--txt)">Richie Dasilva</b>, founder of <a href="https://nullnosis.com" style="color:var(--cher)">Nullnosis</a>, a studio focused on how companies get found — by search engines, AI engines, and the people with checkbooks.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="foot">
+    <div><span class="mono" style="color:var(--txt);letter-spacing:.15em">ROI<span style="color:var(--cher)">FLO</span></span> · tracking the energy behind AI</div>
+    <div><a href="#tracker">Tracker</a> · <a href="#brief">Brief</a> · <a href="#visibility">Audits</a> · <a href="https://nullnosis.com">Nullnosis</a> · <a href="mailto:hello@nullnosis.com">hello@nullnosis.com</a></div>
+    <div>© 2026 ROIFLO — a <a href="https://nullnosis.com">Nullnosis</a> project</div>
+  </div>
+</footer>
+
+<script>
+/* flowing energy currents */
+var cv=document.getElementById('cur'),cx=cv.getContext('2d');
+var W,H,flows=[];
+function size(){
+  W=cv.width=innerWidth;H=cv.height=innerHeight;
+  flows=Array.from({length:Math.min(200,Math.floor(W*H/12000))},function(){
+    return{x:Math.random()*W,y:Math.random()*H,sp:.5+Math.random()*1.2,c:Math.random()};
+  });
+}
+size();addEventListener('resize',size);
+var mouse={x:-999,y:-999};
+addEventListener('mousemove',function(e){mouse.x=e.clientX;mouse.y=e.clientY});
+function field(x,y,t){
+  return Math.sin(x*.0015+t*.0002)*Math.cos(y*.0012-t*.00016)*6.28+Math.sin((x+y)*.0006+t*.0001)*3.14;
+}
+(function loop(){
+  cx.clearRect(0,0,W,H);
+  var t=performance.now();
+  for(var i=0;i<flows.length;i++){var f=flows[i];
+    var a=field(f.x,f.y,t);
+    var dx=f.x-mouse.x,dy=f.y-mouse.y,d2=dx*dx+dy*dy;
+    if(d2<40000){var d=Math.sqrt(d2)||1,k=1-d/200;a+=((Math.atan2(dy,dx)+1.5708)-a)*k*.8}
+    var nx=f.x+Math.cos(a)*f.sp*2.2,ny=f.y+Math.sin(a)*f.sp*2.2;
+    cx.beginPath();cx.moveTo(f.x,f.y);cx.lineTo(nx,ny);
+    cx.strokeStyle=f.c<.12?'rgba(255,180,84,.22)':(f.c<.3?'rgba(126,240,192,.14)':'rgba(55,214,255,.13)');
+    cx.lineWidth=1.1;cx.stroke();
+    f.x=nx;f.y=ny;
+    if(f.x<-5)f.x=W+4;if(f.x>W+5)f.x=-4;
+    if(f.y<-5)f.y=H+4;if(f.y>H+5)f.y=-4;
+  }
+  requestAnimationFrame(loop);
+})();
+/* reveal on scroll */
+var io=new IntersectionObserver(function(es){es.forEach(function(e){
+  if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}
+})},{threshold:.1});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+</script>
 </body>
 </html>
